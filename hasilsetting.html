@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pengaturan</title>
+</head>
+
+<body>
+    <h2>Hasil Pengaturan</h2>
+
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $language = $_POST['language'];
+
+        echo "<p>Username: " . $username . "</p>";
+        echo "<p>Email: " . $email . "</p>";
+        echo "<p>Password: " . $password . "</p>";
+        echo "<p>Bahasa: " . $language . "</p>";
+    } else {
+        echo "<p>Data tidak tersedia.</p>";
+    }
+    ?>
+</body>
+
+</html>
